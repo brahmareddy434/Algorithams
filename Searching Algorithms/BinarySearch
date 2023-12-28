@@ -1,0 +1,37 @@
+Binary Search also a One of the Most used algorithm for searching
+ Time Complexity->O(log N)
+
+this algorithm is applicable only applicable for sorting objects
+here first we need to calculate the mid point
+ex:
+Intially Starting point as 0 and Last Point as list size-1
+
+ex::
+package Collectionss;
+
+public class LinearSearch {
+	public String search(int[] arr, int l, int r, int x) {
+		while (l <= r) {
+			int m = l + (r - l) / 2;
+
+			if (arr[m] == x)
+				return "The searching ELement is available inside the array at the index ";
+
+			if (arr[m] < x)
+				l = m + 1;
+
+			else
+				r = m - 1;
+		}
+		return "The Seraching Elemenkt is Not available inside the Array";
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[] = { 1, 3, 5, 9, 11, 20, 34 };
+		String ans = new LinearSearch().search(a, 0, a.length - 1, 34);
+		System.out.println(ans);
+	}
+
+}
